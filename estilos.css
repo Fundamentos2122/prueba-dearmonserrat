@@ -1,0 +1,53 @@
+/* Selector universal */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    color: red;
+}
+
+/* Con identificador */
+#p1 {
+    text-align: justify;
+}
+
+/* Clase "border" */
+.border {
+    border: 1px solid black;
+}
+
+/* Elemento que contenga el atributo "attr1" */
+[attr1] {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* El valor del atributo debe ser completamente igual */
+[attr1="Párrafo tres"] {
+    font-size:  20px;
+}
+
+/* El valor comienza con la cadena dada */
+[attr1|="Párrafo"] {
+    font-weight: bold;
+}
+
+/* El valor comienza con los caracteres dados */
+[attr1^="Párr"] {
+    color: brown;
+}
+
+/* El valor termina con los caracteres dados */
+[attr1$="s"] {
+    margin-left: 30px;
+}
+
+/* El valor contiene la cadena dada, sin importar la posición de la misma (AQUÍ SÍ DEBEN HABER ESPACIOS, NO GUIONES) */
+[attr1~="Párrafo"] {
+    border: 1px solid black;
+}
+
+/* El valor contiene los caracteres dados, sin importar la posición del mismo */
+[attr1*="u"] {
+    text-transform: uppercase;
+}
