@@ -5,17 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!--PSEUDOCLASES: Estados de los elementos (Se utilizan :)-->
+    <style>
+        [name="conditions"]:checked {
+            margin-left: 50px;
+        }
+
+        /* [type="text"] puede cambiar a input: focus*/
+        [type="text"]:focus {
+            box-shadow: 2px 2px 20px red;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        #botón_fake {
+            border: 1px solid darkgrey;
+            border-radius: 2px;
+        }
+
+        #botón_fake:hover{
+            cursor: pointer;
+        }
+
+        input:required {
+            color: darkred;
+        }
+    </style>
+
+    <!--PSEUDOELEMENTOS: Partes de un elemento (Se utilizan ::)-->
+    <style>
+        #p_aux::after {
+            content: url("UASLP.png");
+        }
+
+        #p_aux::first-letter {
+            text-transform: uppercase;
+            font-size: 32px;
+        }
+
+        #p_aux::first-line {
+            color: blue;
+        }
+        
+        #p_aux::selection {
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
     <form>
         <label for="username">Nombre de usuario</label>
-        <input type="text" name="username">
+        <input type="text" name="username" autocomplete="off">
         <br>
         <label for="birthday">Fecha de nacimiento</label>
         <input type="date" name="birthday">
         <br>
         <label for="age">Edad</label>
-        <input type="number" name="age" step="0.5">
+        <input type="number" name="age" step="0.5" required>
         <br>
         <input type="checkbox" name="conditions">
         <label for="conditions">Acepta los términos y condiciones</label>
@@ -55,5 +104,13 @@
         <button type="button">Guardar</button>
     </form>
     <button>Otro botón</button>
+
+    <!--EJEMPLO PARA PSEUDOCLASES-->
+    <br>
+    <br>
+    <div id="botón_fake">Presiona aquí</div>
+
+    <!--EJEMPLO PARA PSEUDOELEMENTOS-->
+    <p id="p_aux">lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos aut rerum provident explicabo maxime! Fuga nisi assumenda obcaecati quibusdam, placeat ut magnam, repudiandae itaque voluptatum, exercitationem laudantium nostrum temporibus unde.</p>
 </body>
 </html>
