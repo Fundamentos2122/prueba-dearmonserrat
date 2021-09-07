@@ -54,6 +54,17 @@
             background-color: yellow;
         }
     </style>
+
+    <!--ESPECIFICIDAD-->
+    <style>
+        p#ejemplo.p2 {
+            color: violet;
+        }
+
+        .p1 {
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <form>
@@ -112,5 +123,8 @@
 
     <!--EJEMPLO PARA PSEUDOELEMENTOS-->
     <p id="p_aux">lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos aut rerum provident explicabo maxime! Fuga nisi assumenda obcaecati quibusdam, placeat ut magnam, repudiandae itaque voluptatum, exercitationem laudantium nostrum temporibus unde.</p>
+
+    <!--ESPECIFICIDAD-->
+    <p id="ejemplo" class="p1  p2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora harum rem molestiae libero impedit velit quas repellat doloremque quos quae? Rerum beatae pariatur quia optio, sapiente nostrum distinctio nesciunt at!</p>
 </body>
 </html>
